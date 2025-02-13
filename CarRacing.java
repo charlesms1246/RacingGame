@@ -48,7 +48,7 @@ public class CarRacing extends Application {
         Scene startScene = new Scene(startRoot, WINDOW_WIDTH, WINDOW_HEIGHT);
 
         // Load background image for start screen
-        Image startImage = new Image(getClass().getResource("start1.jpg").toString());
+        Image startImage = new Image(getClass().getResource("/assets/start1.jpg").toString());
         ImageView startBackground = new ImageView(startImage);
         startBackground.setFitWidth(WINDOW_WIDTH);
         startBackground.setFitHeight(WINDOW_HEIGHT);
@@ -87,9 +87,9 @@ public class CarRacing extends Application {
         }
 
         // Load images
-        Image roadImage = new Image(getClass().getResource("road.png").toString());
-        Image carImage = new Image(getClass().getResource("car.png").toString());
-        Image obstacleImage = new Image(getClass().getResource("skull.png").toString());
+        Image roadImage = new Image(getClass().getResource("/assets/road.png").toString());
+        Image carImage = new Image(getClass().getResource("/assets/car.png").toString());
+        Image obstacleImage = new Image(getClass().getResource("/assets/skull.png").toString());
 
         // Background
         ImageView road = new ImageView(roadImage);
@@ -165,11 +165,11 @@ public class CarRacing extends Application {
     private boolean loadAudioFiles() {
         try {
             // Load the background music file
-            Media backgroundMusic = new Media(getClass().getResource("background.mp3").toString());
+            Media backgroundMusic = new Media(getClass().getResource("/assets/background.mp3").toString());
             backgroundMusicPlayer = new MediaPlayer(backgroundMusic);
 
             // Load the collision sound file
-            Media collisionSound = new Media(getClass().getResource("collision.mp3").toString());
+            Media collisionSound = new Media(getClass().getResource("/assets/collision.mp3").toString());
             collisionSoundPlayer = new MediaPlayer(collisionSound);
 
             return true;
